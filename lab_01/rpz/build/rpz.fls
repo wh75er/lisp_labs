@@ -299,6 +299,10 @@ INPUT /home/wh75er/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/labx1200.tfm
 INPUT /usr/share/texmf-dist/tex/latex/ucs/data/uni-33.def
 INPUT /usr/share/texmf-dist/tex/latex/ucs/data/uni-33.def
 INPUT /home/wh75er/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /home/wh75er/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm
+INPUT rpz.toc
+INPUT rpz.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/tex/latex/cmap/ot1.cmap
 INPUT /usr/share/texmf-dist/tex/latex/cmap/ot1.cmap
@@ -335,12 +339,6 @@ INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /home/wh75er/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm0800.tfm
-INPUT /home/wh75er/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm0600.tfm
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT /home/wh75er/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm
-INPUT rpz.toc
-INPUT rpz.toc
 OUTPUT rpz.toc
 OUTPUT 1-intro.aux
 INPUT /home/wh75er/projects/lisp_labs/lab_01/rpz/tex/1-intro.tex
@@ -366,7 +364,6 @@ INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb
