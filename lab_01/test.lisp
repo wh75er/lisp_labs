@@ -1,0 +1,1 @@
+(write (car `(B C)))

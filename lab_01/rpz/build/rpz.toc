@@ -1,0 +1,4 @@
+\babel@toc {russian}{}
+\contentsline {chapter}{\CYRV \cyrv \cyre \cyrd \cyre \cyrn \cyri \cyre }{3}{section*.2}
+\contentsline {chapter}{\numberline {1}\IeC {\nobreakspace }\IeC {\CYRA }\IeC {\cyrn }\IeC {\cyra }\IeC {\cyrl }\IeC {\cyri }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrch }\IeC {\cyre }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}\IeC {\nobreakspace }\IeC {\CYRK }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrs }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrk }\IeC {\cyrt }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrs }\IeC {\cyrk }\IeC {\cyri }\IeC {\cyrishrt } \IeC {\cyrr }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyrd }\IeC {\cyre }\IeC {\cyrl }}{5}{chapter.2}
