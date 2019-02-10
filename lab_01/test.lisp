@@ -1,1 +1,1 @@
-(write (car `(B C)))
+(write (caddr `((abc)(def)(ghi))))

@@ -1,3 +1,38 @@
-\chapter{ Аналитический раздел}
+\chapter{ Выполнение работы}
 \label{cha:analysis}
 
+\section{ Первое задание}
+Представить следующие списки в виде списочных выражений:
+
+\section{ Второе задание}
+Используя только функции CAR и CDR, написать выражения, возвращающие второй, третий, четвуртый элементы заданного списка.
+
+Получение отдельных элементов списка (1 2 3 4 5 6) представлено в \ref{lst:cadr}
+\begin{lstlisting}[style=lispStyle, caption={Получение элементов списка с помощью команд car и cdr.},
+                    label={lst:cadr}]
+(cadr `(1 2 3 4 5 6))   ; получить второй элемент
+(caddr `(1 2 3 4 5 6))   ; получить третий элемент
+(cadddr `(1 2 3 4 5 6))   ; получить четвертый элемент
+\end{lstlisting}
+
+\section{ Третье задание}
+Что будет в результате вычисления выражений?
+Сами выражения и результаты их вычислений представлены в \ref{lst:thirdtask}
+\begin{lstlisting}[style=lispStyle, caption={Получение элементов списка с помощью команд car и cdr.},
+                    label={lst:thirdtask}]
+;a)
+(caadr `((blue cube)(red pyramid)))
+;red
+
+;b)
+(cdar `((abc)(def)(ghi)))
+;Nil
+
+;c)
+(cadr `((abc)(def)(ghi)))
+;(def)
+
+;d)
+(caddr `((abc)(def)(ghi)))
+;(ghi)
+\end{lstlisting}

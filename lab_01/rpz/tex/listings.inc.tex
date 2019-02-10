@@ -2,6 +2,26 @@
 
 \usepackage{listings}
 \usepackage{wrapfig}
+\usepackage{xcolor}
+
+
+\definecolor{lispgreen}{RGB}{154, 228, 151}
+\definecolor{lightgray}{gray}{0.97}
+\definecolor{violet}{rgb}{0.8, 0, 0.7}
+
+\lstdefinestyle{lispStyle}{
+        language=Lisp,
+        basicstyle=\ttfamily\small,
+        numbers=left,
+        numberstyle=\tiny,
+        keywordsprefix=&,
+        keywordstyle=\color{lispgreen!70!black},
+        stringstyle=\color{violet},
+        showstringspaces=false,
+        backgroundcolor=\color{lightgray},
+        frame=single}
+
+
 % Значения по умолчанию
 \lstset{
   basicstyle= \footnotesize,
