@@ -4,93 +4,51 @@
 \section{ Первое задание}
 Представить следующие списки в виде списочных выражений:
 
-\section{ Второе задание}
-Используя только функции CAR и CDR, написать выражения, возвращающие второй, третий, четвуртый элементы заданного списка.
+\begin{figure}[ht!]
+    \centering{
+        \includegraphics[width=1\textwidth]{img/OpenCloseHalpf.png}
+        \caption{ Представление выражения `(open close halph) в виде списочных ячеек}
+        \label{fig:openclosehalph}
+    }
+\end{figure}
 
-Получение отдельных элементов списка (1 2 3 4 5 6) представлено в \ref{lst:cadr}
-\begin{lstlisting}[style=lispStyle, caption={Получение элементов списка с помощью команд car и cdr.},
-                    label={lst:cadr}]
-(cadr `(1 2 3 4 5 6))   ; получить второй элемент
-(caddr `(1 2 3 4 5 6))   ; получить третий элемент
-(cadddr `(1 2 3 4 5 6))   ; получить четвертый элемент
-\end{lstlisting}
+\begin{figure}[ht!]
+    \centering{
+        \includegraphics[width=1\textwidth]{img/Open1Close2Halpf3.png}
+        \caption{ Представление выражения `((open1)(close2)(halph3)) в виде списочных ячеек}
+        \label{fig:open1close2halph3}
+    }
+\end{figure}
 
-\section{ Третье задание}
-Что будет в результате вычисления выражений?
-Сами выражения и результаты их вычислений представлены в \ref{lst:thirdtask}
-\begin{lstlisting}[style=lispStyle, caption={Получение элементов списка с помощью команд car и cdr.},
-                    label={lst:thirdtask}]
-;a)
-(caadr `((blue cube)(red pyramid)))
-;red
+\begin{figure}[ht!]
+    \centering{
+        \includegraphics[width=1\textwidth]{img/OneForAllAndMeForYou.png}
+        \caption{ Представление выражения `((one)for all (and(me(for you)))) виде списочных ячеек}
+        \label{fig:oneforall}
+    }
+\end{figure}
 
-;b)
-(cdar `((abc)(def)(ghi)))
-;Nil
+\begin{figure}[ht!]
+    \centering{
+        \includegraphics[width=1\textwidth]{img/ToolCall.png}
+        \caption{ Представление выражения `((TOOL)(call)) в виде списочных ячеек}
+        \label{fig:toolcall}
+    }
+\end{figure}
 
-;c)
-(cadr `((abc)(def)(ghi)))
-;(def)
+\begin{figure}[ht!]
+    \centering{
+        \includegraphics[width=1\textwidth]{img/Tool1Call2Sell.png}
+        \caption{ Представление выражения `((TOOL1)((call2))((sell))) в виде списочных ячеек}
+        \label{fig:tool1call2sell}
+    }
+\end{figure}
 
-;d)
-(caddr `((abc)(def)(ghi)))
-;(ghi)
-\end{lstlisting}
+\begin{figure}[ht!]
+    \centering{
+        \includegraphics[width=1\textwidth]{img/ToolCallSell.png}
+        \caption{ Представление выражения `(((TOOL)(call))((sell))) в виде списочных ячеек}
+        \label{fig:toolcallsell}
+    }
+\end{figure}
 
-\section{ Четвертое задание}
-Напишите результат вычисления выражений. Выполнение задания представлено в \ref{lst:4task}
-\begin{lstlisting}[style=lispStyle, caption={Выражения и их результат},
-                label={lst:4task}]
-(list 'Fred 'and Wilma)
-;Ошибка
-
-(list 'Fred'(and Wilma))
-;(A (B C))
-
-(cons Nil Nil)
-(Nil)
-
-(cons T Nil)
-(T)
-
-(cons Nil T)
-(Nil . T)
-
-(list Nil)
-(Nil)
-
-(cons (T)Nil)
-;Ошибка, T - воспринимается как функция
-
-(list '(one two)'(free temp))
-;((one two) (free temp))
-
-
-(cons 'Fred'(and Wilma))
-;(Fred and Wilma)
-
-(cons 'Fred'(Wilma))
-;(Fred Wilma)
-
-(list Nil Nil)
-;(Nil Nil)
-
-(list T Nil)
-;(T Nil)
-
-(cons T(list Nil))
-;(T Nil)
-
-(list (T)Nil)
-;Ошибка, функция T неопределена
-
-(cons `(one two)'(free temp))
-;((one two) free temp)
-\end{lstlisting}
-
-\section{ Пятое задание}
-Написать функцию (f ar1 ar2 ar3 ar4), возвращающую список \ref{lst:func}
-\begin{equation}
-\label{lst:func}
-((ar1 ar2)(ar3 ar4))
-\end{equation}
