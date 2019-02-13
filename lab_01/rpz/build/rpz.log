@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.8)  10 FEB 2019 23:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.8)  11 FEB 2019 16:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1207,10 +1207,13 @@ File: koi8-r.def 2014/10/28 v1.0d Input encoding file
 )
 (/usr/share/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2014/10/28 v1.0d Input encoding file
-)) [3
+) [3
 
 
 ]
+(/usr/share/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2014/10/28 v1.0d Input encoding file
+) [4]) [5]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
  (./rpz.aux
@@ -1218,7 +1221,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
 Package rerunfilecheck Info: File `rpz.out' has not changed.
-(rerunfilecheck)             Checksum: 5F4D7E54EE8A407ED7C698AA1C22DBA6;709.
+(rerunfilecheck)             Checksum: F6F4F00C32BE3A92C270E52034092A23;1073.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1226,26 +1229,27 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
  ) 
 Here is how much of TeX's memory you used:
- 26830 strings out of 492639
- 450525 string characters out of 6135498
- 729874 words of memory out of 5000000
- 30171 multiletter control sequences out of 15000+600000
+ 26897 strings out of 492639
+ 451555 string characters out of 6135498
+ 731005 words of memory out of 5000000
+ 30185 multiletter control sequences out of 15000+600000
  16734 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,5n,84p,742b,1940s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,6n,84p,742b,2391s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/
-texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf-dist/font
-s/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/
-cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit10
-95.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/
-fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sf
-tt1095.pfb>
-Output written on rpz.pdf (3 pages, 180160 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
+/cm-super/sfbi1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1
+200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb></usr/share/texmf-dist
+/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
+frm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></u
+sr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on rpz.pdf (5 pages, 213505 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 227 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

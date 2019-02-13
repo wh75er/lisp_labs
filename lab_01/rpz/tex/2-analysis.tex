@@ -36,3 +36,61 @@
 (caddr `((abc)(def)(ghi)))
 ;(ghi)
 \end{lstlisting}
+
+\section{ Четвертое задание}
+Напишите результат вычисления выражений. Выполнение задания представлено в \ref{lst:4task}
+\begin{lstlisting}[style=lispStyle, caption={Выражения и их результат},
+                label={lst:4task}]
+(list 'Fred 'and Wilma)
+;Ошибка
+
+(list 'Fred'(and Wilma))
+;(A (B C))
+
+(cons Nil Nil)
+(Nil)
+
+(cons T Nil)
+(T)
+
+(cons Nil T)
+(Nil . T)
+
+(list Nil)
+(Nil)
+
+(cons (T)Nil)
+;Ошибка, T - воспринимается как функция
+
+(list '(one two)'(free temp))
+;((one two) (free temp))
+
+
+(cons 'Fred'(and Wilma))
+;(Fred and Wilma)
+
+(cons 'Fred'(Wilma))
+;(Fred Wilma)
+
+(list Nil Nil)
+;(Nil Nil)
+
+(list T Nil)
+;(T Nil)
+
+(cons T(list Nil))
+;(T Nil)
+
+(list (T)Nil)
+;Ошибка, функция T неопределена
+
+(cons `(one two)'(free temp))
+;((one two) free temp)
+\end{lstlisting}
+
+\section{ Пятое задание}
+Написать функцию (f ar1 ar2 ar3 ar4), возвращающую список \ref{lst:func}
+\begin{equation}
+\label{lst:func}
+((ar1 ar2)(ar3 ar4))
+\end{equation}
