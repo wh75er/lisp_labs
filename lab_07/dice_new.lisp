@@ -5,7 +5,7 @@
 )
 
 (defun player_throw(name)
-    (setf thrw (throw_dice))
+    (let ((thrw (throw_dice)))
     (print name)
     (princ ": ")
     (write thrw)
@@ -15,6 +15,7 @@
         (player_throw name)
     )
     thrw
+    )
 )
 
 (defun dice_sum(thrw)
@@ -29,22 +30,20 @@
 )
 
 (defun game()
-    (setf sum1 (dice_sum (player_throw `Player1)))
-    (setf res `(Player1 won!))
+    (let ((sum1 (dice_sum (player_throw `Player1)))
+        (res `(Player1 won!)))
     
     (if (not (abs_win sum1))
-        (progn   
-            (setf sum2 (dice_sum (player_throw `Player2)))
-            (if (eq sum1 sum2)
-                (game)
-                (if (or (> sum2 sum1) (abs_win sum2))
-                    (setf res `(Player2 won!))
-                )
+        (if (eq sum1 (dice_sum (player_throw `Player2)))
+            (game)
+            (if (or (> (dice_sum (player_throw `Player2)) sum1) (abs_win (dice_sum (player_throw `Player2))))
+                (let ((res `(Player2 won!))))
             )
         )
         ()
     )
     res
+    )
 )
 
 (time (game))
