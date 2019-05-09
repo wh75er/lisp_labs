@@ -1,0 +1,108 @@
+\chapter{ Выполнение работы}
+\label{cha:analysis}
+
+\section{ Первое задание}
+    Написать функцию, которая переводит температуру в системе Фаренгейта в температуру по Цельсию.
+
+Данная функция представлена в виде lymbda-выражения и вызывается с помощью apply. Результаты представлены в  \ref{lst:res1}
+
+\begin{lstlisting}[style=lispStyle, caption={ Функция и результат работы с аргументом 451.},
+                    label={lst:res1}]
+(apply #'(lambda (temp) (float ( * (/ 5 9) (- temp 32)))) `(451))
+;232.77777
+\end{lstlisting}
+
+\section{ Второе задание}
+Что получится при вычислении каждого из выражений?
+
+Выражения и их результаты представлены в \ref{lst:res2}
+
+\begin{lstlisting}[style=lispStyle, caption={ Выражения и их результаты.},
+                    label={lst:res2}]
+(list 'cons t NIL)
+;(cons t nil)
+
+(eval (eval (list 'cons t NIL)))
+;Ошибка
+
+(apply #'cons `(t NIL))
+;(t)
+
+(list `eval NIL)
+;(eval NIL)
+
+(eval (list 'cons t NIL))
+;(t)
+
+(eval NIL)
+;nil
+
+(eval (list `eval NIL))
+;(nil)
+\end{lstlisting}
+
+\section{ Третье задание}
+Написать функцию, которая принимает целое число и возвращает первое четное число, не меньшее аргумента.
+
+Функция представлена в \ref{lst:res3}
+
+\begin{lstlisting}[style=lispStyle, caption={ Представление функции.},
+                    label={lst:res3}]
+(defun evenr(x) (if (evenp x) (eval x) (+ x 1)))
+\end{lstlisting}
+
+\section{ Четвертое задание}
+Написать функцию, которая принимает число и возвращает число того же знака, но с модулем на 1 больше модуля аргумента.
+
+Функция представлена в \ref{lst:res4}
+
+\begin{lstlisting}[style=lispStyle, caption={ Представление функции.},
+                    label={lst:res4}]
+(defun abs-plus(x) (if (>= x 0) (+ (abs x) 1) ( * -1 (+ (abs x) 1))))
+\end{lstlisting}
+
+\section{ Пятое задание}
+Написать функцию, которая принимает два числа и возвращает список этих чисел, расположенный по возрастанию.
+
+Функция представлена в \ref{lst:res5}
+
+\begin{lstlisting}[style=lispStyle, caption={ Представление функции.},
+                    label={lst:res5}]
+(defun greater-list(a b) (if (>= b a) (list a b) (list b a)))
+\end{lstlisting}
+
+\section{ Шестое задание}
+Написать функцию, которая принимает три числа и возвращает T только тогда, когда первое число расположено между вторым и третьим.
+
+Функция представлена в \ref{lst:res6}
+
+\begin{lstlisting}[style=lispStyle, caption={ Представление функции.},
+                    label={lst:res6}]
+(defun num-between(b a c) (if (or (and (>= b a) (<= b c)) (and (>= b c) (<= b a))) (eval T) ()))
+\end{lstlisting}
+
+\section{ Седьмое задание}
+Каков результат вычисления следующих выражений?
+
+Выражения и их результаты представлены в \ref{lst:res7}
+
+\begin{lstlisting}[style=lispStyle, caption={ Выражения и их результаты.},
+                    label={lst:res7}]
+(and `fee `fie `foe)
+;foe
+
+(or `fee `fie `foe)
+;fee
+
+(and (equal `abc `abc) `yes)
+;yes
+
+(or nil `fie `foe)
+;fie
+
+(and nil `fie `foe)
+;nil
+
+(or (equal `abc `abc) `yes)
+;t
+\end{lstlisting}

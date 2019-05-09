@@ -1,0 +1,172 @@
+\chapter{ Выполнение работы}
+\label{cha:analysis}
+
+\section{ Первое задание}
+
+Написать предикат, который принимает два числа-аргумента и возвращает T, если первое число не меньше второго.
+
+Данная функция представлена в \ref{lst:res1}
+
+\begin{lstlisting}[style=lispStyle, caption={ Предикат, который проводит сравнение чисел a и b.},
+                    label={lst:res1}]
+(defun f (a b) (>= a b))
+\end{lstlisting}
+
+\section{ Второе задание}
+
+Переписать функцию how-alike, приведенную в лекции и использующую COND, используя конструкции IF, AND/OR.
+
+\section{ Третье задание}
+
+Чем принципиально отличаются функции cons, list, append?
+
+Пусть (setf lst1 `(a b))(setf lst2 `(c d))
+
+Каковы результаты следующих выражений? Сами выражения и их результаты представленны в \ref{lst:task3}
+
+Принципиальные отличия cons и list заключаются в:
+\begin{enumerate}
+    \item количестве аргументов(cons принимает только два аргумента, а list - неограниченное количество;
+    \item в конечном результате. Cons возвращает точечную пару, которая в итоге может оказаться списком. List - только список.
+\end{enumerate}
+
+Принципиальное отличие append от list:
+\begin{enumerate}
+    \item в аргументах, подающихся на вход. Append принимает на вход только списки. List может принимать как списки, так и атомы;
+\end{enumerate}
+
+\begin{lstlisting}[style=lispStyle, caption={ Выражения и их результата.},
+                    label={lst:task3}]
+(cons lst1 lst2)
+;((a b) c d)
+(list lst1 lst2)
+;((a b) (c d))
+(append lst1 lst2)
+;(a b c d)
+\end{lstlisting}
+
+\section{ Четвертое задание}
+
+Каковы результаты вычисления следующих выражений?
+
+Сами выражения и их результаты представлены в \ref{lst:res4}
+
+\begin{lstlisting}[style=lispStyle, caption={ Выражения и их результата.},
+                    label={lst:res4}]
+(reverse ())
+;Nil
+(last ())
+;Nil
+(reverse `(a))
+;(a)
+(last `(a))
+;(a)
+(reverse `((a b c)))
+;((a b c))
+(last `((a b c)))
+;((a b c))
+\end{lstlisting}
+
+\section{ Пятое задание}
+
+Написать, по крайней мере, два варианта функции, которая возвращает последний элемент своего списка-аргумента.
+
+Функции представлены в \ref{lst:res5}
+
+\begin{lstlisting}[style=lispStyle, caption={ Функции, возвращающие последний элемент списка},
+                    label={lst:res5}]
+(defun f1(lst)
+    (if (null lst)
+        lst
+        (or (f1 (cdr lst))
+            (if (null (cdr lst))
+                lst
+            )
+        )
+    )
+)
+
+(defun f2(lst)
+    (car (reverse lst))
+)
+\end{lstlisting}
+
+\section{ Шестое задание}
+
+Написать, по крайней мере, два варианта функции, которая возвращает свой список-аргумент без последнего элемента.
+
+Функции представлены в \ref{lst:res6}
+
+\begin{lstlisting}[style=lispStyle, caption={ Функции, возвращающие список без последнего элемента},
+                    label={lst:res6}]
+(defun f1(lst)
+        (if (null lst)
+            lst
+            (if (not (null (cdr lst)))
+                (cons (car lst) (f1 (cdr lst)))
+            )
+        )
+)
+
+(defun f2(lst)
+    (reverse (cdr (reverse lst)))
+)
+\end{lstlisting}
+
+\section{ Седьмое задание}
+Написать простой вариант игры в кости, в котором бросаются две правильные кости. Если сумма выпавших очков равна 7 или 11 -- выиграш, если выпало (1, 1) или (6, 6) -- игрок получает право снова бросить кости, во всех остальных случаях ход переходит ко второму игроку, но запоминается сумма выпавших очков. Если второй игрок не выиграывает абсолютно, то выигрывает тот игрок, у которого больше очков. Результат игры и значения выпавших костей выводить на экран с помощью функции print.
+
+Листинг программы представлен в \ref{lst:res7}
+
+\begin{lstlisting}[style=lispStyle, caption={ Программа симмуляции игры в кости.},
+                    label={lst:res7}]
+
+(setf *random-state* (make-random-state t))
+
+(defun throw-dice()
+    (list (+ 1 (random 6)) (+ 1 (random 6)))
+)
+
+(defun player-throw(name)
+    (setf thrw (throw-dice))
+    (print name)
+    (princ ": ")
+    (write thrw)
+    (if (or (equal thrw `(1 1))
+        (equal thrw `(6 6))
+        )
+        (player-throw name)
+    )
+    thrw
+)
+
+(defun dice-sum(thrw)
+    (+ (car thrw) (cadr thrw))
+)
+
+(defun abs-win(sum)
+    (if (or (eq sum 7) (eq sum 11))
+        T
+        Nil
+    )
+)
+
+(defun game()
+    (setf sum1 (dice-sum (player-throw `Player1)))
+    (setf res `(Player1 won!))
+    
+    (if (not (abs-win sum1))
+        (progn   
+            (setf sum2 (dice-sum (player-throw `Player2)))
+            (if (eq sum1 sum2)
+                (game)
+                (if (> sum2 sum1)
+                    (setf res `(Player2 won!))
+                )
+            )
+        )
+        ()
+    )
+    res
+)
+\end{lstlisting}
