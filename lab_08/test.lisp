@@ -1,16 +1,5 @@
-(defun f1(x lst) 
-    (if (null lst)
-        lst
-        (or (f1 x (cdr lst))
-            (if (listp (car lst))
-                (f1 x (car lst))
-                (if (equal x (car lst))
-                    t
-                    nil
-                )
-            )
-        )
-    )
+(defun my-remove-if(func lst)
+    (mapcan #'(lambda(x) (cond ((null (funcall func x)) (list x)))) lst)
 )
 
-(write (f1 1 (list 9 (list 5 1 2))))
+(write (my-remove-if (lambda(x)(> x 3)) `(1 2 (3 4 2 5) 6 7 8)))
